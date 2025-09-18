@@ -1,10 +1,103 @@
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="ur">
 <head>
-  <title>My Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Codewithnawaz-creator</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" type="image/x-icon" href="C:\Users\BUSINESS\Downloads\nawaz3.png">
 </head>
-<body>
-  <h1>Welcome to My Website!</h1>
-  <p>This site is hosted with GitHub Pages 🚀</p>
+<body >
+  <header class="site-header">
+    <div class="container header-inner">         
+     
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false">☰ </button>
+      <nav id="mainNav" class="nav">&nbsp;&nbsp;
+       
+        &nbsp; &nbsp; &nbsp; <a target="_blank" href="#home" >Home</a> &nbsp;
+       &nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;                          <a target="_blank" href="#services">Services</a>
+        &nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;<a target="_blank" href="#about">About</a>
+       &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <a target="_blank" href="#contact">Contact </a> 
+       <h1 align="center"  > <b> <i>
+        <hr>
+        <img align="left" src="C:\Users\BUSINESS\Downloads\nawaz2.png" alt="image" width="10%"> &nbsp;
+ &nbsp;
+ &nbsp;
+        Coding with Nawaz-Creator</b> </i>  </h1><hr>
+       
+       <a  class="logo" href="#" width="30%"><img src="C:\Users\BUSINESS\Desktop\images.jpeg"  alt="Company Logo"></a>
+      <img src="C:\Users\BUSINESS\Desktop\images (1).jpeg" align="right" alt="image">
+      
+     
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <h1 style="color: rgb(229, 63, 61);"> Our Professional Services</h1>
+        <p>We provide high-quality web solutions — from design and development to maintenance and support — built to help your business grow online.</p>
+        <a class="btn" href="#contact">Get a Quote</a>
+      </div>
+    </section>
+
+    <section id="services" class="services container">
+      <h2 style="color: rgb(233, 38, 38);" >Our Services</h2>
+      <div class="cards">
+        <article class="card">
+          <h3 style="background-color: chocolate;";>Web Development</h3>
+          <p>We create modern, responsive, and SEO-friendly websites tailored to your business needs. From small businesses to large enterprises, our websites are designed to engage your audience and drive results.</p>
+        </article>
+        <article class="card">
+          <h3 style="background-color: chocolate;">UI/UX Design</h3>
+          <p>We design user-centered interfaces that not only look stunning but also make browsing simple and enjoyable. Our conversion-focused designs guide visitors smoothly toward becoming loyal customers.</p>
+        </article>
+        <article class="card">
+          <h3 style="background-color: chocolate;">Maintenance</h3>
+          <p>Your website’s performance matters. We provide regular updates, backups, and security monitoring to keep your site running fast, safe, and error-free — so you can focus on your business.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2 style="background-color: chocolate;">About Us</h2>
+      <p style="">We are a passionate team of web designers and developers dedicated to creating digital solutions that help businesses grow. Our focus is simple — design websites that are user-friendly, visually appealing, and built to convert visitors into customers.
+      With years of experience in Web Development, UI/UX Design, and Website Maintenance, we understand what it takes to build a strong online presence. From small startups to established businesses, we deliver solutions tailored to your unique . <br>
+    <h3 style="background-color: chocolate;"> 💡 Our Mission:</h3>
+     <i> To empower businesses with modern, responsive, and customer-focused websites that generate real results.</p></i>
+    </section>
+   
+
+    <section id="contact" class="contact container">
+      <h2 style="color: red;">Contact</h2>
+      <hr >
+      <form id="contactForm" novalidate>
+        <label>
+          Name
+          <input type="text" name="name" id="name" required >
+        </label>
+        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Email 
+          <input type="email" name="email" id="email" required>
+        </label><br><br>
+        <label>
+          Message
+          <textarea name="message" id="message" rows="4" required></textarea>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn">Send Message</button>
+        <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> My Business. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
