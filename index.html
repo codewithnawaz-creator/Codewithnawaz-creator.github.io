@@ -73,19 +73,19 @@
     <section id="contact" class="contact container">
       <h2 style="color: red;">Contact</h2>
       <hr >
-      <form id="contactForm" novalidate>
+      <form id="contactForm" validate>
         <label>
           Name
           <input type="text" name="name" id="name" required >
         </label>
-        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>
           Email 
           <input type="email" name="email" id="email" required>
         </label><br><br>
         <label>
           Message
           <textarea name="message" id="message" rows="4" required></textarea>
-        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
         <button type="submit" class="btn">Send Message</button>
         <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
       </form>
