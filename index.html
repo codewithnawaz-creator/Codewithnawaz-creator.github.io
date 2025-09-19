@@ -1,11 +1,10 @@
-
 <!doctype html>
 <html lang="ur">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Codewithnawaz-creator</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>My Coding Journey-With Nawaz</title>
+ 
   <link rel="shortcut icon" type="image/x-icon" href="C:\Users\BUSINESS\Downloads\nawaz3.png">
 </head>
 <body >
@@ -13,18 +12,17 @@
     <div class="container header-inner">         
      
       <button id="menuToggle" class="menu-toggle" aria-expanded="false">☰ </button>
-      <nav id="mainNav" class="nav">&nbsp;&nbsp;
+      <nav id="mainNav" class="nav">
        
-        &nbsp; &nbsp; &nbsp; <a target="_blank" href="#home" >Home</a> &nbsp;
-       &nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;                          <a target="_blank" href="#services">Services</a>
-        &nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;<a target="_blank" href="#about">About</a>
-       &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <a target="_blank" href="#contact">Contact </a> 
-       <h1 align="center"  > <b> <i>
-        <hr>
-        <img align="left" src="C:\Users\BUSINESS\Downloads\nawaz2.png" alt="image" width="10%"> &nbsp;
- &nbsp;
- &nbsp;
-        Coding with Nawaz-Creator</b> </i>  </h1><hr>
+         <a target="_blank" href="#home" >Home</a> 
+          <a target="_blank" href="#services">Services</a>
+         <a target="_blank" href="#about">About</a>
+         <a target="_blank" href="#contact">Contact </a> 
+         <h1 align="center"  > <b> <i>
+        
+            <img align="left" src="C:\Users\BUSINESS\Downloads\nawaz2.png" alt="image" width="10%">
+ 
+           "Code with Nawaz-From Zero to Hero"</b> </i>  </h1><hr>
        
        <a  class="logo" href="#" width="30%"><img src="C:\Users\BUSINESS\Desktop\images.jpeg"  alt="Company Logo"></a>
       <img src="C:\Users\BUSINESS\Desktop\images (1).jpeg" align="right" alt="image">
@@ -77,15 +75,15 @@
         <label>
           Name
           <input type="text" name="name" id="name" required >
-        </label> <br><br>
-        <label>
+        </label>
+        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           Email 
           <input type="email" name="email" id="email" required>
         </label><br><br>
         <label>
           Message
           <textarea name="message" id="message" rows="4" required></textarea>
-        </label>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button type="submit" class="btn">Send Message</button>
         <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
       </form>
@@ -97,96 +95,82 @@
       <p>© <span id="year"></span> My Business. All rights reserved.</p>
     </div>
   </footer>
-  
-  
-  <style>
-    :root{
-      --primary:#0d6efd;
-      --dark:#222;
-      --muted:#666;
-      --bg:#f8f9fa;
-      --container:1100px;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial;
+  <style> :root{
+  --primary:#0d6efd;
+  --dark:#222;
+  --muted:#666;
+  --bg:#f8f9fa;
+  --container:1100px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{margin:0;color:var(--dark);background:var(--bg);line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+
+.site-header{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem}
+.logo img{height:42px}
+.nav a{margin-left:1rem;text-decoration:none;color:var(--dark)}
+.menu-toggle{display:none;background:none;border:0;font-size:1.5rem}
+
+.hero{background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)), url('../assets/hero.jpg');background-size:cover;background-position:center;color:#fff;padding:4rem 0}
+.hero-content{max-width:700px}
+.hero h1{font-size:2rem;margin:0 0 .5rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:6px;background:var(--primary);color:#fff;text-decoration:none;border:0}
+.services{padding:2rem 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.about{padding:2rem 0}
+.contact{padding:2rem 0}
+.contact form{display:grid;gap:.75rem;max-width:600px}
+.contact input,.contact textarea{width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px}
+.form-msg{color:green;margin-top:.5rem}
+
+/* footer */
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:800px){
+  .cards{grid-template-columns:1fr}
+  .menu-toggle{display:block}
+  .nav{position:absolute;right:1rem;top:64px;background:#fff;padding:1rem;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.08);display:none}
+  .nav.show{display:block}
+}</style>
+
+  <script >// Basic interactivity: mobile menu, form validation, dynamic year
+document.addEventListener('DOMContentLoaded', function(){
+  // year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  menuToggle.addEventListener('click', () => {
+    const shown = mainNav.classList.toggle('show');
+    menuToggle.setAttribute('aria-expanded', shown);
+  });
+
+  // contact form (client-side only)
+  const form = document.getElementById('contactForm');
+  const msg = document.getElementById('formMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    // simple validation
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if(!name || !email || !message){
+      msg.style.color = 'crimson';
+      msg.textContent = 'براہِ کرم تمام فیلڈز مکمل کریں';
+      return;
     }
-    *{box-sizing:border-box}
-    body{margin:0;color:var(--dark);background:var(--bg);line-height:1.5}
-    .container{max-width:var(--container);margin:0 auto;padding:1rem}
-    .site-header{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.06)}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem}
-    .logo img{height:42px}
-    .nav a{margin-left:1rem;text-decoration:none;color:var(--dark)}
-    .menu-toggle{display:none;background:none;border:0;font-size:1.5rem}
-    .hero{background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)), url('assets/hero.jpg');
-          background-size:cover;background-position:center;color:#fff;padding:4rem 0}
-    .hero-content{max-width:700px}
-    .hero h1{font-size:2rem;margin:0 0 .5rem}
-    .btn{display:inline-block;padding:.6rem 1rem;border-radius:6px;background:var(--primary);color:#fff;text-decoration:none;border:0}
-    .services{padding:2rem 0}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
-    .card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-    .about{padding:2rem 0}
-    .contact{padding:2rem 0}
-    .contact form{display:grid;gap:.75rem;max-width:600px}
-    .contact input,.contact textarea{width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px}
-    .form-msg{color:green;margin-top:.5rem}
-    .site-footer{padding:1rem 0;text-align:center;color:var(--muted)}
-    @media (max-width:800px){
-      .cards{grid-template-columns:1fr}
-      .menu-toggle{display:block}
-      .nav{position:absolute;right:1rem;top:64px;background:#fff;padding:1rem;border-radius:8px;
-           box-shadow:0 4px 16px rgba(0,0,0,.08);display:none}
-      .nav.show{display:block}
-    }
-  </style>
-</head>
-
-  
-    
-  
-
-  
-
-  
-
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      // year
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // mobile menu toggle
-      const menuToggle = document.getElementById('menuToggle');
-      const mainNav = document.getElementById('mainNav');
-      menuToggle.addEventListener('click', () => {
-        const shown = mainNav.classList.toggle('show');
-        menuToggle.setAttribute('aria-expanded', shown);
-      });
-
-      // contact form (client-side only)
-      const form = document.getElementById('contactForm');
-      const msg = document.getElementById('formMsg');
-      if(form){
-        form.addEventListener('submit', function(e){
-          e.preventDefault();
-          const name = document.getElementById('name').value.trim();
-          const email = document.getElementById('email').value.trim();
-          const message = document.getElementById('message').value.trim();
-          if(!name || !email || !message){
-            msg.style.color = 'crimson';
-            msg.textContent = 'براہِ کرم تمام فیلڈز مکمل کریں';
-            return;
-          }
-          msg.style.color = 'green';
-          msg.textContent = 'پیغام موصول ہوا — ہم جلد رابطہ کریں گے۔';
-          form.reset();
-        });
-      
-    });
-  </script>
-
-
-
-  
-  
+    // simulate successful send (replace with real backend or service)
+    msg.style.color = 'green';
+    msg.textContent = 'پیغام موصول ہوا — ہم جلد رابطہ کریں گے۔';
+    form.reset();
+  });
+});</script>
 </body>
 </html>
+
